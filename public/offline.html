@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Offline - Tinasaurus</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #333;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      padding: 40px;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    .icon {
+      font-size: 64px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .tagline {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .description {
+      font-size: 16px;
+      color: #888;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+    }
+
+    button, a {
+      padding: 12px 24px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+    }
+
+    .btn-secondary {
+      background: #f0f0f0;
+      color: #333;
+    }
+
+    .btn-secondary:hover {
+      background: #e0e0e0;
+    }
+
+    .offline-info {
+      background: #f9f9f9;
+      border-left: 4px solid #667eea;
+      padding: 15px;
+      margin-top: 30px;
+      text-align: left;
+      border-radius: 4px;
+    }
+
+    .offline-info h3 {
+      margin-bottom: 10px;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .offline-info ul {
+      list-style: none;
+      padding: 0;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .offline-info li {
+      padding: 5px 0;
+    }
+
+    .offline-info li:before {
+      content: "✓ ";
+      color: #667eea;
+      font-weight: bold;
+      margin-right: 8px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      button, a {
+        transition: none;
+      }
+
+      .btn-primary:hover {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="icon">📡</div>
+    <h1>You're Offline</h1>
+    <p class="tagline">But you can still explore cached content</p>
+    
+    <p class="description">
+      It looks like you've lost your internet connection. Don't worry! 
+      We've cached some content for you to explore while you're offline.
+    </p>
+
+    <div class="actions">
+      <button class="btn-primary" onclick="tryReload()">Try Again</button>
+      <a href="/" class="btn-secondary">Go Home</a>
+    </div>
+
+    <div class="offline-info">
+      <h3>What You Can Do:</h3>
+      <ul>
+        <li>View previously loaded pages</li>
+        <li>Read cached blog posts</li>
+        <li>Access documentation</li>
+        <li>Browse images and videos (if loaded)</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function tryReload() {
+      window.location.reload();
+    }
+
+    // Auto-reload when back online
+    window.addEventListener('online', () => {
+      console.log('Back online! Reloading...');
+      setTimeout(() => {
+        window.location.reload();
+      }, 1000);
+    });
+
+    // Show status
+    window.addEventListener('offline', () => {
+      console.log('Gone offline');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+.video {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 2rem 0;
+}
+
+.thumbnail {
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.thumbnail:hover {
+  opacity: 0.9;
+}
+
+.thumbnail:focus {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+.playButton {
+  transition: background-color 0.3s ease;
+}
+
+.playButton:hover {
+  background-color: rgba(255, 0, 0, 1) !important;
+}
+
+.playButton:focus {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}

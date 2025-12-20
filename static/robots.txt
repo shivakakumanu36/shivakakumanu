@@ -1,0 +1,33 @@
+# Robots.txt for Tinasaurus
+# Allow all bots to crawl and index
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /.next/
+Disallow: /node_modules/
+Disallow: /build/
+Disallow: /*?*
+Crawl-delay: 0
+
+# Google Bot specific rules
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing Bot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://tinasaurus.vercel.app/sitemap.xml
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
