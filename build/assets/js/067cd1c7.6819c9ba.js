@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktinasaurus=self.webpackChunktinasaurus||[]).push([[2088],{610:t=>{t.exports=JSON.parse('{"tag":{"label":"Getting started","permalink":"/docs/tags/getting-started","allTagsPath":"/docs/tags","count":1,"items":[{"id":"intro","title":"Tutorial Intro","description":"Discover Docusaurus","permalink":"/docs/intro"}],"unlisted":false}}')}}]);

@@ -1,0 +1,11 @@
+# Environment secrets
+.env.local
+
+# Dependency installs
+node_modules/
+
+# Build artifacts
+build/
+
+# Generated Tina files
+tina/__generated__/
