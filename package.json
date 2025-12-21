@@ -6,7 +6,7 @@
     "update:deps": "npm update && npm install @docusaurus/core@latest @docusaurus/preset-classic@latest",
     "audit:fix": "npm audit fix || true",
     "docusaurus": "docusaurus",
-    "dev": "tinacms dev -c \"docusaurus start\" ",
+    "dev": "tinacms dev -c \"docusaurus start\" --watchFolders config --watchFolders src --watchFolders docs --watchFolders blog --watchFolders static --watchFolders tina",
     "start": "docusaurus start",
   "prebuild": "node scripts/convert-images-to-webp.js",
   "build": "tinacms build && docusaurus build",

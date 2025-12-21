@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from "react";
 import { Features } from "../Features";
+import { StoryBlock } from "../StoryBlock";
 
 // Lazy load YouTubeEmbed component
 const YouTubeEmbed = lazy(() =>
@@ -36,6 +37,12 @@ export const Blocks = ({ blocks }) => {
                 return (
                   <div data-tinafield={`blocks.${i}`} key={i + block._template}>
                     <Features data={block} index={i} />
+                  </div>
+                );
+              case "story":
+                return (
+                  <div data-tinafield={`blocks.${i}`} key={i + block._template}>
+                    <StoryBlock data={block} index={i} />
                   </div>
                 );
               case "youTubeEmbed":
