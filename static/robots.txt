@@ -1,4 +1,4 @@
-# Robots.txt for Tinasaurus
+# Robots.txt for ShivaKakumanu
 # Allow all bots to crawl and index
 User-agent: *
 Allow: /
@@ -20,7 +20,7 @@ Allow: /
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://tinasaurus.vercel.app/sitemap.xml
+Sitemap: https://shivakakumanu.com/sitemap.xml
 
 # Block bad bots
 User-agent: AhrefsBot

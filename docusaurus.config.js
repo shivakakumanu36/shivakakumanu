@@ -88,7 +88,7 @@ const formatNavbarItem = (item, subnav = false) => {
 const config = {
   title: docusaurusData.title || "My Site",
   tagline: docusaurusData.tagline || "Dinosaurs are cool",
-  url: docusaurusData.url || "https://tinasaurus.vercel.app/",
+  url: docusaurusData.url || "https://shivakakumanu.com",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -114,7 +114,7 @@ const config = {
     siteDescription: docusaurusData.description || "Build better content sites faster with Docusaurus and TinaCMS",
     socialImage: "/img/social-image.png",
     twitterHandle: "@tinacms",
-    organizationName: "Tinasaurus",
+    organizationName: "ShivaKakumanu",
     organizationUrl: docusaurusData.url,
     googleSiteVerification: process.env.GOOGLE_SITE_VERIFICATION || "",
     googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID || "",
@@ -284,7 +284,7 @@ const config = {
         },
         {
           name: "author",
-          content: "Tinasaurus",
+          content: "ShivaKakumanu",
         },
         {
           name: "robots",
@@ -301,7 +301,7 @@ const config = {
         },
         {
           property: "og:title",
-          content: docusaurusData.title || "Tinasaurus",
+          content: docusaurusData.title || "ShivaKakumanu",
         },
         {
           property: "og:description",
@@ -313,7 +313,7 @@ const config = {
         },
         {
           property: "og:site_name",
-          content: docusaurusData.title || "Tinasaurus",
+          content: docusaurusData.title || "ShivaKakumanu",
         },
         {
           property: "og:locale",
@@ -330,7 +330,7 @@ const config = {
         },
         {
           name: "twitter:title",
-          content: docusaurusData.title || "Tinasaurus",
+          content: docusaurusData.title || "ShivaKakumanu",
         },
         {
           name: "twitter:description",
@@ -343,7 +343,7 @@ const config = {
         // Schema.org Structured Data - Organization
         {
           itemProp: "name",
-          content: docusaurusData.title || "Tinasaurus",
+          content: docusaurusData.title || "ShivaKakumanu",
         },
         {
           itemProp: "description",
@@ -373,14 +373,6 @@ const config = {
       ],
       navbar: {
         title: docusaurusData.title || "",
-        logo: {
-          alt: docusaurusData?.logo?.alt
-            ? docusaurusData?.logo?.alt
-            : "My Logo",
-          src: docusaurusData?.logo?.src
-            ? docusaurusData?.logo?.src
-            : "img/logo.svg",
-        },
         items: docusaurusData.navbar.map((item) => {
           return formatNavbarItem(item);
         }),

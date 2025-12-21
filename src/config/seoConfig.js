@@ -10,7 +10,7 @@ export const generateOrganizationSchema = (config) => {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: config.title || "Tinasaurus",
+    name: config.title || "ShivaKakumanu",
     description: config.description || "Build better content sites faster with Docusaurus and TinaCMS",
     url: config.url,
     logo: `${config.url}/img/logo.svg`,
@@ -51,12 +51,12 @@ export const generateArticleSchema = (article) => {
     dateModified: article.dateModified || article.datePublished,
     author: {
       "@type": "Person",
-      name: article.author || "Tinasaurus",
+      name: article.author || "ShivaKakumanu",
       url: article.authorUrl || "#",
     },
     publisher: {
       "@type": "Organization",
-      name: "Tinasaurus",
+      name: "ShivaKakumanu",
       logo: {
         "@type": "ImageObject",
         url: "/img/logo.svg",
@@ -95,7 +95,7 @@ export const generateProductSchema = (product) => {
     image: product.images,
     brand: {
       "@type": "Brand",
-      name: product.brand || "Tinasaurus",
+      name: product.brand || "ShivaKakumanu",
     },
     offers: {
       "@type": "Offer",
@@ -139,8 +139,8 @@ Crawl-delay: 0
 User-agent: Bingbot
 Crawl-delay: 1
 
-Sitemap: https://tinasaurus.vercel.app/sitemap.xml
-Sitemap: https://tinasaurus.vercel.app/sitemap-blog.xml
+Sitemap: https://shivakakumanu.com/sitemap.xml
+Sitemap: https://shivakakumanu.com/sitemap-blog.xml
 
 # Performance directives
 Request-rate: 30/60 (requests per 60 seconds)

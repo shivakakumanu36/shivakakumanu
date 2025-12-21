@@ -29,7 +29,7 @@ export function BlogPostSchema({ post, author, siteName, siteUrl }) {
     image: post.image || `${siteUrl}/img/default-og-image.png`,
     datePublished: post.date,
     dateModified: post.modified || post.date,
-    author: author?.name || 'Tinasaurus',
+    author: author?.name || 'ShivaKakumanu',
     authorUrl: author?.url || siteUrl,
     url: `${siteUrl}/blog/${post.slug}`,
     content: post.content,

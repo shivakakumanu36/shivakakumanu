@@ -1,5 +1,7 @@
 {
   "label": "Settings",
+  "title": "SHIVA KAKUMANU",
+  "url": "https://shivakakumanu.com",
   "navbar": [
     {
       "label": "Docs",
@@ -15,7 +17,6 @@
     {
       "label": "MDX Page",
       "link": "page",
-      "docLink": "src/pages/Test-MDX-Page.mdx",
       "pageLink": "src/pages/Test-MDX-Page.mdx",
       "position": "left"
     },
@@ -32,11 +33,6 @@
       "position": "right"
     }
   ],
-  "logo": {
-    "alt": "Tina",
-    "src": "/img/tina-icon.svg"
-  },
-  "title": "Tinasaurus",
   "footer": {
     "style": "dark",
     "links": [
@@ -85,7 +81,6 @@
         ]
       }
     ],
-    "copyright": "My Project, Inc. Built with Docusaurus."
-  },
-  "url": "https://tinasaurus.vercel.app/"
+    "copyright": "My Project, Inc."
+  }
 }

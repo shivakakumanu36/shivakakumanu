@@ -255,7 +255,7 @@ self.addEventListener('push', (event) => {
 
   const data = event.data.json();
   const options = {
-    body: data.body || 'Tinasaurus notification',
+    body: data.body || 'ShivaKakumanu notification',
     icon: '/img/logo.svg',
     badge: '/img/badge.svg',
     tag: data.tag || 'notification',
@@ -263,7 +263,7 @@ self.addEventListener('push', (event) => {
   };
 
   event.waitUntil(
-    self.registration.showNotification(data.title || 'Tinasaurus', options)
+    self.registration.showNotification(data.title || 'ShivaKakumanu', options)
   );
 });
 
