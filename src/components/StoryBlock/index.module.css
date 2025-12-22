@@ -1,6 +1,5 @@
 .storySection {
-  padding: 1rem 0;
-  gap: 2.5rem;
+  padding: 3rem 0;
 }
 
 .storyImageWrapper {
@@ -8,24 +7,24 @@
   border-radius: 1.25rem;
   overflow: hidden;
   box-shadow: 0 24px 48px rgba(17, 24, 39, 0.12);
-  background-color: #ffffff;
+  background-color: var(--ifm-background-surface-color);
   max-width: 640px;
   justify-self: center;
 }
 
 @media screen and (max-width: 768px) {
   .storySection {
-    padding: 1rem 0;
+    padding: 2rem 0;
   }
   .storyImageWrapper {
-  position: relative;
-  border-radius: 1.25rem;
-  overflow: hidden;
-  box-shadow: 0 24px 48px rgba(17, 24, 39, 0.12);
-  background-color: #ffffff;
-  max-width: 340px;
-  justify-self: center;
-}
+    position: relative;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    box-shadow: 0 24px 48px rgba(17, 24, 39, 0.12);
+    background-color: var(--ifm-background-surface-color);
+    max-width: 340px;
+    justify-self: center;
+  }
 }
 
 .storyContainer {
@@ -48,19 +47,47 @@
   flex-direction: column;
   justify-content: center;
   gap: 1.1rem;
+  width: 100%;
   max-width: 720px;
+  justify-self: center;
 }
 
 .storyTitle {
-  margin: 0;
+  margin: 0 0 0.25rem;
   font-size: clamp(2rem, 2vw + 1.5rem, 2.6rem);
   line-height: 1.2;
   color: #2c1f17;
+  letter-spacing: -0.02em;
 }
 
 .storyParagraph {
   margin: 0;
-  font-size: 1.05rem;
+  font-size: 1rem;
   line-height: 1.85;
   color: #3c2b24;
+  max-width: 60ch;
+}
+
+@media screen and (max-width: 996px) {
+  .storyContainer {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    justify-items: center;
+  }
+  .storyContent {
+    max-width: 720px;
+  }
+}
+
+:global([data-theme="dark"]) .storyTitle {
+  color: #ffffff;
+}
+
+:global([data-theme="dark"]) .storyParagraph {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+:global([data-theme="dark"]) .storyImageWrapper {
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
