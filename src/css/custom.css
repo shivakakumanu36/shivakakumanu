@@ -29,6 +29,33 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+/* Navbar + sidebar styling (Hasura-like) */
+.navbar {
+  background: var(--ifm-background-surface-color);
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.theme-doc-sidebar-container {
+  background: var(--ifm-color-emphasis-50);
+  border-right: 1px solid var(--ifm-color-emphasis-200);
+}
+
+/* Sidebar active indicator + tighter feel */
+.theme-doc-sidebar-container .menu__link {
+  border-radius: 10px;
+}
+
+.theme-doc-sidebar-container .menu__link--active {
+  background: rgba(46, 133, 85, 0.08);
+  box-shadow: inset 3px 0 0 var(--ifm-color-primary);
+  font-weight: 650;
+}
+
+.theme-doc-sidebar-container .menu__list-item-collapsible--active > .menu__link {
+  background: rgba(46, 133, 85, 0.08);
+  box-shadow: inset 3px 0 0 var(--ifm-color-primary);
+}
+
 /* "Start here" pill (desktop + mobile) */
 .navbar-start-here {
   display: inline-flex;

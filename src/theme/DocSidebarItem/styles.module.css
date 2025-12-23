@@ -1,0 +1,21 @@
+.menuLinkWithIcon {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.iconWrap {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  opacity: 0.95;
+}
+
+.iconSvg {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+

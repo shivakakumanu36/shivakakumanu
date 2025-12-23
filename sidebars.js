@@ -8,6 +8,27 @@ const getDocId = (doc) => {
     .join("/");
 };
 
+const getIconForCategoryLabel = (label) => {
+  const normalized = String(label || "").toLowerCase();
+  if (normalized.includes("tutorial") && normalized.includes("basics")) {
+    return "book";
+  }
+  if (normalized.includes("tutorial") && normalized.includes("extras")) {
+    return "sparkles";
+  }
+  if (normalized.includes("nested")) {
+    return "layers";
+  }
+  return undefined;
+};
+
+const getIconForDocId = (id) => {
+  const normalized = String(id || "").toLowerCase();
+  if (normalized.endsWith("start-here")) return "home";
+  if (normalized.endsWith("intro")) return "info";
+  return undefined;
+};
+
 const getItem = (item) => {
   const type = item["_template"];
 
@@ -21,6 +42,10 @@ const getItem = (item) => {
     }
 
     itemProps.id = getDocId(item.document);
+    const icon = getIconForDocId(itemProps.id);
+    if (icon) {
+      itemProps.customProps = { icon };
+    }
 
     if (item.label) {
       itemProps.label = item.label;
@@ -32,20 +57,13 @@ const getItem = (item) => {
       itemProps.label = item.title;
     }
 
-    if (item.link && item.link !== "none") {
-      if (item.link === "doc" && item.docLink) {
-        itemProps.link = {
-          type: "doc",
-          id: getDocId(item.docLink),
-        };
-      } else if (item.link === "generated") {
-        itemProps.link = {
-          type: "generated-index",
-        };
-      } else {
-        return [];
-      }
+    const icon = getIconForCategoryLabel(itemProps.label);
+    if (icon) {
+      itemProps.customProps = { icon };
     }
+
+    // Categories (parent sections) should not be navigable pages:
+    // clicking them expands/collapses but stays on the current page.
 
     itemProps.items = item.items.flatMap((item) => {
       return getItem(item);
