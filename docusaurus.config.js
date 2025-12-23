@@ -396,6 +396,12 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      docs: {
+        sidebar: {
+          hideable: true,
+          autoCollapseCategories: true,
+        },
+      },
       // Algolia search configuration (optional)
       // search: {
       //   appId: process.env.ALGOLIA_APP_ID || "",

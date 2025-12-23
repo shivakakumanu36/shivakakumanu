@@ -56,6 +56,18 @@
   }
 }
 
+/* Mobile: disable fixed (sticky) navbar */
+@media (max-width: 996px) {
+  .navbar.navbar--fixed-top {
+    position: static;
+  }
+
+  .navbar.navbar--fixed-top + .main-wrapper,
+  .main-wrapper {
+    padding-top: 0 !important;
+  }
+}
+
 /* Hide breadcrumbs + pagination on Start Here page */
 .docs-doc-id-start-here .breadcrumbs {
   display: none;

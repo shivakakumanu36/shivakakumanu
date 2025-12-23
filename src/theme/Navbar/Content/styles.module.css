@@ -7,3 +7,60 @@ Hide color mode toggle in small viewports
   }
 }
 
+.floatingFab {
+  position: fixed;
+  bottom: calc(1rem + env(safe-area-inset-bottom));
+  z-index: 2000;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 999px;
+  border: 1px solid rgba(46, 133, 85, 0.35);
+  background-color: rgba(46, 133, 85, 0.25);
+  box-shadow: var(--ifm-global-shadow-lw);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.floatingFabLeft {
+  left: calc(1rem + env(safe-area-inset-left));
+}
+
+.floatingFabRight {
+  right: calc(1rem + env(safe-area-inset-right));
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .floatingFab:hover {
+    color: #fff;
+    background-color: var(--ifm-color-primary);
+    border-color: var(--ifm-color-primary);
+  }
+}
+
+.floatingFab:active,
+.floatingFab:focus-visible {
+  color: #fff;
+  background-color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+}
+
+:global(html[data-touching='true']) .floatingFab {
+  color: #fff;
+  background-color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+}
+
+.floatingFab:active {
+  transform: translateY(1px);
+}
+
+.floatingFabIcon {
+  transition: transform 160ms ease;
+}
+
+.floatingFabIconOpen {
+  transform: rotate(180deg);
+}
