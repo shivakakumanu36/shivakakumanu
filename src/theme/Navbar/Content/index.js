@@ -84,7 +84,7 @@ export default function NavbarContent() {
       }
       right={
         <>
-          <Link className="navbar-start-here" to="/docs/intro">
+          <Link className="navbar-start-here" to="/docs/start-here">
             Start here
           </Link>
           <NavbarItems items={rightItems} />

@@ -68,6 +68,11 @@
   max-width: 60ch;
 }
 
+.rotatingWrap {
+  margin-top: 0.2rem;
+  max-width: 60ch;
+}
+
 @media screen and (max-width: 996px) {
   .storyContainer {
     grid-template-columns: 1fr;

@@ -1,0 +1,45 @@
+.row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.prefix {
+  color: #3c2b24;
+}
+
+.phrase {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+.phraseIn {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.phraseOut {
+  opacity: 0;
+  transform: translateY(-0.35em);
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .phraseIn,
+  .phraseOut {
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+:global([data-theme="dark"]) .prefix {
+  color: rgba(255, 255, 255, 0.82);
+}
+

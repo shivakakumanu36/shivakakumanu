@@ -2,6 +2,10 @@
   "label": "Docs Sidebar",
   "items": [
     {
+      "document": "docs/start-here.mdx",
+      "_template": "doc"
+    },
+    {
       "document": "docs/intro.mdx",
       "_template": "doc"
     },

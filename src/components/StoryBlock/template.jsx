@@ -26,5 +26,19 @@ export const StoryBlockTemplate = {
         component: "textarea",
       },
     },
+    {
+      name: "rotatingPrefix",
+      label: "Rotating Prefix",
+      type: "string",
+    },
+    {
+      name: "rotatingPhrases",
+      label: "Rotating Phrases",
+      type: "string",
+      list: true,
+      ui: {
+        component: "textarea",
+      },
+    },
   ],
 };

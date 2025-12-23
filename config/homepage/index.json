@@ -15,6 +15,17 @@
         "Writing helps me do that. I don’t write to impress I write to be clear, with myself and with anyone reading. ",
         "This blog is a collection of practical ideas, technical writing, and personal reflections drawn from real experience both successes and missteps.",
         "I write to think better, live more intentionally, and leave behind work that’s honest and useful. If you value depth, patience, and thoughtful simplicity, I’m glad you found your way here."
+      ],
+      "rotatingPrefix": "I write about",
+      "rotatingPhrases": [
+        "software systems",
+        "practical engineering",
+        "clear writing",
+        "curiosity",
+        "everyday decisions",
+        "personal growth",
+        "the unscripted beauty of life",
+        "the quiet moments"
       ]
     }
   ]
