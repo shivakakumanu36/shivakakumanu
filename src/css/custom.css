@@ -28,3 +28,28 @@
   --ifm-color-primary-lightest: #fbe1c7;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Mobile: show “Start here” in the top navbar */
+@media (max-width: 996px) {
+  .navbar__items--right {
+    display: flex !important;
+    gap: 0.5rem;
+  }
+
+  .navbar-start-here {
+    display: inline-flex !important;
+    align-items: center;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    background: var(--ifm-color-primary);
+    color: #fff;
+    font-weight: 650;
+    line-height: 1;
+    text-decoration: none;
+  }
+
+  .navbar-start-here:hover {
+    opacity: 0.92;
+    text-decoration: none;
+  }
+}

@@ -57,6 +57,14 @@ const formatNavbarItem = (item, subnav = false) => {
     navItem.position = item.position;
   }
 
+  if (item.className) {
+    navItem.className = item.className;
+  }
+
+  if (item.ariaLabel) {
+    navItem.ariaLabel = item.ariaLabel;
+  }
+
   if (item.link === "external" && item.externalLink) {
     navItem.href = item.externalLink;
   }
