@@ -182,6 +182,7 @@ export default function DocSidebarItemCategory({
   }, [collapsible, expandedItem, index, setCollapsed, autoCollapseCategories]);
 
   const iconName = customProps?.icon;
+  const isTopLevel = level === 1;
 
   return (
     <li
@@ -227,12 +228,19 @@ export default function DocSidebarItemCategory({
           href={collapsible ? hrefWithSSRFallback ?? "#" : hrefWithSSRFallback}
           {...props}
         >
-          {iconName ? (
-            <span className={styles.iconWrap}>
+          {isTopLevel && iconName ? (
+            <span className={clsx(styles.iconWrap, styles.topLevelIconWrap)}>
               <SidebarIcon name={iconName} />
             </span>
           ) : null}
-          <span>{label}</span>
+          <span
+            className={clsx(
+              isTopLevel ? styles.topLevelLabel : styles.nestedLabel,
+              isTopLevel && isActive && styles.activeTopLevelLabel
+            )}
+          >
+            {label}
+          </span>
         </Link>
         {href && collapsible && (
           <CollapseButton
@@ -258,4 +266,3 @@ export default function DocSidebarItemCategory({
     </li>
   );
 }
-

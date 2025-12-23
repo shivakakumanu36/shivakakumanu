@@ -88,6 +88,7 @@ export default function DocSidebarItemLink({
   const isActive = isActiveSidebarItem(item, activePath);
   const isInternalLink = isInternalUrl(href);
   const iconName = customProps?.icon;
+  const isTopLevel = level === 1;
 
   return (
     <li
@@ -111,15 +112,21 @@ export default function DocSidebarItemLink({
         })}
         {...props}
       >
-        {iconName ? (
-          <span className={styles.iconWrap}>
+        {isTopLevel && iconName ? (
+          <span className={clsx(styles.iconWrap, styles.topLevelIconWrap)}>
             <SidebarIcon name={iconName} />
           </span>
         ) : null}
-        <span>{label}</span>
+        <span
+          className={clsx(
+            isTopLevel ? styles.topLevelLabel : styles.nestedLabel,
+            isTopLevel && isActive && styles.activeTopLevelLabel
+          )}
+        >
+          {label}
+        </span>
         {!isInternalLink && <IconExternalLink />}
       </Link>
     </li>
   );
 }
-

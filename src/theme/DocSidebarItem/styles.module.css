@@ -14,8 +14,36 @@
   opacity: 0.95;
 }
 
+.topLevelIconWrap {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.06);
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.topLevelLabel {
+  font-size: 1.05rem;
+  color: var(--ifm-color-emphasis-700);
+  font-weight: 500;
+}
+
+.activeTopLevelLabel {
+  color: var(--ifm-color-emphasis-900);
+  font-weight: 650;
+}
+
+.nestedLabel {
+  color: var(--ifm-color-emphasis-700);
+  font-weight: 450;
+}
+
 .iconSvg {
   width: 1.15rem;
   height: 1.15rem;
 }
 
+.topLevelIconSvg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
