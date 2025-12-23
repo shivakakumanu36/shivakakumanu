@@ -6,16 +6,16 @@
  * - Push notifications
  */
 
-const CACHE_NAME = 'tinasaurus-v1';
+const CACHE_NAME = 'shivakakumanu-v1';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
   '/offline.html',
 ];
 
-const DYNAMIC_CACHE = 'tinasaurus-dynamic-v1';
-const IMAGE_CACHE = 'tinasaurus-images-v1';
-const API_CACHE = 'tinasaurus-api-v1';
+const DYNAMIC_CACHE = 'shivakakumanu-dynamic-v1';
+const IMAGE_CACHE = 'shivakakumanu-images-v1';
+const API_CACHE = 'shivakakumanu-api-v1';
 
 const CACHE_EXPIRATION = {
   images: 30 * 24 * 60 * 60 * 1000, // 30 days
@@ -46,7 +46,7 @@ self.addEventListener('activate', (event) => {
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames
-          .filter((name) => !name.includes('tinasaurus'))
+          .filter((name) => !name.includes('shivakakumanu'))
           .map((name) => caches.delete(name))
       );
     })

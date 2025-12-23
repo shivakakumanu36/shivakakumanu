@@ -400,7 +400,7 @@ const config = {
       // search: {
       //   appId: process.env.ALGOLIA_APP_ID || "",
       //   apiKey: process.env.ALGOLIA_API_KEY || "",
-      //   indexName: process.env.ALGOLIA_INDEX_NAME || "tinasaurus",
+      //   indexName: process.env.ALGOLIA_INDEX_NAME || "shivakakumanu",
       // },
     }),
 };

@@ -84,11 +84,9 @@ export default function NavbarContent() {
       }
       right={
         <>
-          {isMobile && (
-            <Link className="navbar-start-here" to="/docs/intro">
-              Start here
-            </Link>
-          )}
+          <Link className="navbar-start-here" to="/docs/intro">
+            Start here
+          </Link>
           <NavbarItems items={rightItems} />
           <NavbarColorModeToggle className={styles.colorModeToggle} />
           {!searchBarItem && (

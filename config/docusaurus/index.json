@@ -2,25 +2,7 @@
   "label": "Settings",
   "title": "SHIVA KAKUMANU",
   "url": "https://shivakakumanu.com",
-  "navbar": [
-    {
-      "label": "Docs",
-      "link": "doc",
-      "docLink": "docs/intro.mdx",
-      "position": "left"
-    },
-    {
-      "label": "Blog",
-      "link": "blog",
-      "position": "left"
-    },
-    {
-      "label": "MDX Page",
-      "link": "page",
-      "pageLink": "src/pages/Test-MDX-Page.mdx",
-      "position": "left"
-    }
-  ],
+  "navbar": [],
   "footer": {
     "style": "dark",
     "links": [],
