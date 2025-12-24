@@ -35,15 +35,15 @@
   --ifm-h3-font-size: 1.35rem;
 
   /* Accessible text colors */
-  --ifm-font-color-base: #111827;
+  --ifm-font-color-base: #222222;
   --ifm-font-color-secondary: #4b5563;
-  --ifm-color-content: #111827;
+  --ifm-color-content: #222222;
   --ifm-color-content-secondary: #4b5563;
-  --ifm-heading-color: #111827;
+  --ifm-heading-color: #222222;
 
   /* Backgrounds */
-  --ifm-background-color: #fbfbff;
-  --ifm-background-surface-color: #ffffff;
+  --ifm-background-color: #F5F5F5;
+  --ifm-background-surface-color: #fafafa;
 
   /* Links: use darker shade for contrast; accent for UI */
   --ifm-link-color: var(--ifm-color-primary);
@@ -92,14 +92,14 @@
   --ifm-color-primary-lightest: #dcfce7;
   --accent-rgb: 74 222 128;
 
-  --ifm-font-color-base: rgba(255, 255, 255, 0.92);
-  --ifm-font-color-secondary: rgba(255, 255, 255, 0.72);
-  --ifm-color-content: rgba(255, 255, 255, 0.92);
-  --ifm-color-content-secondary: rgba(255, 255, 255, 0.72);
-  --ifm-heading-color: rgba(255, 255, 255, 0.95);
+  --ifm-font-color-base: #D9B99B;
+  --ifm-font-color-secondary: rgba(229, 229, 229, 0.78);
+  --ifm-color-content: #e5e5e5;
+  --ifm-color-content-secondary: rgba(229, 229, 229, 0.78);
+  --ifm-heading-color: #e5e5e5;
 
-  --ifm-background-color: #0b1020;
-  --ifm-background-surface-color: #0f172a;
+  --ifm-background-color: #121212;
+  --ifm-background-surface-color: #121212;
 
   /* Links in dark mode can use accent directly */
   --ifm-link-color: var(--ifm-color-primary-light);
