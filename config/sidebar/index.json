@@ -41,6 +41,10 @@
       "link": "generated",
       "items": [
         {
+          "document": "docs/tutorial-extras/api-tokens-and-client-keys.mdx",
+          "_template": "doc"
+        },
+        {
           "document": "docs/tutorial-extras/manage-docs-versions.mdx",
           "_template": "doc"
         },

@@ -1,0 +1,131 @@
+---
+title: API tokens and client keys
+toc_min_heading_level: 2
+toc_max_heading_level: 3
+---
+
+# API tokens and client keys
+
+## Overview
+
+Unleash uses API keys to facilitate communication between consuming clients such as SDKs, Unleash Edge, or other tools and automation.
+
+Unleash supports the following types of API tokens:
+
+- [Backend tokens](#backend-tokens) for connecting backend SDKs or Unleash Edge to Unleash.
+- [Frontend tokens](#frontend-tokens) for connecting frontend SDKs to Unleash using the Frontend API or Unleash Edge.
+- [Personal access tokens](#personal-access-tokens) for testing and debugging or providing temporary access to an automation tool.
+- [Service account tokens](#service-account-tokens) for providing API access to integrations or automation tools.
+
+To connect a frontend SDK to Unleash using Unleash Edge, you need both a backend and frontend token. See [Connect a frontend SDK to Unleash using Edge](#connect-a-frontend-sdk-to-unleash-using-edge) for an example.
+
+## API token types
+
+### Backend tokens
+
+Backend tokens are intended for use in backend SDKs or Unleash Edge to grant the permissions to:
+
+- Reading feature flag information
+- Registering applications with the Unleash server
+- Sending usage metrics
+
+Backend tokens are scoped to one or more projects and a single environment. When creating a backend token, you can give it access to a specific list of projects or to all current or future projects. Backend tokens are secrets and must not be exposed to end users.
+
+Backend tokens cannot be used in frontend SDKs; use frontend tokens instead.
+
+### Frontend tokens
+
+Use frontend tokens for connecting frontend SDKs to Unleash using the Unleash Frontend API or Unleash Edge. They grant the user permission to:
+
+- Reading enabled flags for a given context
+- Registering applications with the Unleash server
+- Sending usage metrics
+
+Frontend tokens are scoped to one or more projects and a single environment. When creating a frontend token, you can give it access to a specific list of projects or to all current or future projects. Frontend tokens are not considered secret and are safe to expose client-side.
+
+Frontend tokens cannot be used in backend SDKs; use backend tokens instead.
+
+### Personal access tokens
+
+Personal access tokens reflect the permissions of the user who creates them. If the user's permissions change, such as through the addition of a custom role, the token automatically updates to match the new permissions. You can use personal access tokens for testing, debugging, or giving temporary access to automation tools.
+
+When you use a personal access token to modify resources, the events record the token creator's name for that operation.
+
+Personal access tokens with a lifetime expire and stop working after their expiration date. Although you can set the token to not expire, we recommend using tokens with expiration dates to follow security best practices.
+
+Personal access tokens are not suitable for use in SDKs, as they are not bound to an environment, they may expire, or their permissions may change.
+
+### Service account tokens
+
+Service account tokens provide API access to integration and automation tools. To learn more, go to Service Accounts.
+
+### Admin tokens
+
+Admin tokens are intended for server-to-server or operator use cases where you need broad access to the Unleash Admin API. Treat admin tokens as secrets and keep them out of client-side applications.
+
+## API token permissions
+
+API token permissions depend on the token type and how you scope it when you create it (for example, environment and project access).
+
+As a rule of thumb:
+
+- Use backend tokens for server-side usage (backend SDKs, Unleash Edge).
+- Use frontend tokens only for client-side usage (frontend SDKs) because they can be exposed safely.
+- Use personal access tokens for temporary testing/debugging and automation that should reflect a specific user.
+- Use service account tokens for long-lived automation and integrations that should not be tied to a person.
+- Use admin tokens only when you need administrative access.
+
+Typical capabilities by token type:
+
+- Backend tokens: read feature flags, register apps, send usage metrics.
+- Frontend tokens: read enabled flags for a given context (client-side safe), register apps, send usage metrics.
+- Personal access tokens: perform actions as the user who created the token.
+- Service account tokens: perform automation/integration actions not tied to a human user.
+- Admin tokens: perform administrative actions (for example managing configuration or resources).
+
+## API token format
+
+API tokens are opaque strings. Treat them like passwords:
+
+- Store tokens in a secrets manager or environment variables.
+- Don’t commit tokens to source control or logs.
+- Rotate tokens if you suspect they have been exposed.
+
+How you pass the token depends on the SDK, client, or integration you use (commonly via an HTTP header).
+
+For example:
+
+```bash
+curl -H "Authorization: <YOUR_API_TOKEN>" https://your-unleash.example/api/...
+```
+
+## Create an API token
+
+When you create a token, you typically choose:
+
+- Token type (backend, frontend, personal access, service account, admin)
+- Environment
+- Project scope (one or more projects, or all projects)
+- Optional expiration date (recommended)
+
+After creating a token, store it securely—many systems only show the raw token value once.
+
+## Connect a frontend SDK to Unleash using Edge
+
+When using Unleash Edge as the client-facing endpoint:
+
+- Unleash Edge uses a backend token to talk to the Unleash server.
+- Your frontend SDK uses a frontend token to talk to Unleash Edge.
+
+This setup lets you keep backend credentials on the server while safely exposing a frontend token in the browser/app.
+
+At a high level:
+
+1. Create a backend token scoped to the environment/project(s) Edge should serve.
+2. Configure Edge with the Unleash server URL and the backend token.
+3. Create a frontend token scoped to the same environment/project(s).
+4. Configure the frontend SDK to use the Edge URL and the frontend token.
+
+## Proxy client keys
+
+Proxy client keys (sometimes referred to as client keys) are used to authenticate against a proxy layer between clients and Unleash. If you use a proxy/edge component, issue client keys with the minimum required access, and rotate them regularly.
