@@ -24,8 +24,7 @@ const getIconForCategoryLabel = (label) => {
 
 const getIconForDocId = (id) => {
   const normalized = String(id || "").toLowerCase();
-  if (normalized.endsWith("start-here")) return "home";
-  if (normalized.endsWith("intro")) return "info";
+  if (normalized.endsWith("intro")) return "home";
   return undefined;
 };
 

@@ -237,7 +237,7 @@ html {
   }
 }
 
-/* "Start here" pill (desktop + mobile) */
+/* "Start here" pill (home page navbar only) */
 .navbar-start-here {
   display: inline-flex;
   align-items: center;
@@ -258,9 +258,6 @@ html {
   .navbar__items--right {
     display: flex !important;
     gap: 0.5rem;
-  }
-  .navbar-start-here {
-    display: inline-flex !important;
   }
 }
 
@@ -308,11 +305,6 @@ html {
   .main-wrapper {
     padding-top: 0 !important;
   }
-}
-
-/* Hide pagination on Start Here page */
-.docs-doc-id-start-here .pagination-nav {
-  display: none;
 }
 
 /* Footer background image */
