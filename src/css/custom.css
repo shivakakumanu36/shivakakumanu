@@ -293,6 +293,11 @@ html {
   }
 }
 
+/* Hide breadcrumbs site-wide (desktop + mobile) */
+.theme-doc-breadcrumbs {
+  display: none;
+}
+
 /* Mobile: disable fixed (sticky) navbar */
 @media (max-width: 996px) {
   .navbar.navbar--fixed-top {
@@ -305,11 +310,7 @@ html {
   }
 }
 
-/* Hide breadcrumbs + pagination on Start Here page */
-.docs-doc-id-start-here .breadcrumbs {
-  display: none;
-}
-
+/* Hide pagination on Start Here page */
 .docs-doc-id-start-here .pagination-nav {
   display: none;
 }
