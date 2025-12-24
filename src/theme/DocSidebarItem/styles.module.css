@@ -15,8 +15,8 @@
 }
 
 .topLevelIconWrap {
-  width: 2.75rem;
-  height: 2.75rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 999px;
   background: rgba(0, 0, 0, 0.06);
   color: rgba(0, 0, 0, 0.85);
@@ -25,6 +25,18 @@
 :global([data-theme="dark"]) .topLevelIconWrap {
   background: rgba(255, 255, 255, 0.08);
   color: rgba(255, 255, 255, 0.9);
+}
+
+:global(.menu__link--active) .topLevelIconWrap {
+  background: rgb(var(--accent-rgb) / 0.12);
+  border: 1px solid rgb(var(--accent-rgb) / 0.35);
+  color: var(--ifm-color-primary);
+}
+
+:global([data-theme="dark"]) :global(.menu__link--active) .topLevelIconWrap {
+  background: rgb(var(--accent-rgb) / 0.18);
+  border: 1px solid rgb(var(--accent-rgb) / 0.45);
+  color: var(--ifm-color-primary);
 }
 
 .topLevelLabel {
