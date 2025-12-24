@@ -174,6 +174,66 @@ html {
   box-shadow: inset 3px 0 0 var(--ifm-color-emphasis-900);
 }
 
+/* Mobile sidebar: match desktop formatting */
+@media (max-width: 996px) {
+  .navbar-sidebar {
+    background: var(--ifm-background-surface-color);
+  }
+
+  .navbar-sidebar__brand {
+    border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  }
+
+  .navbar-sidebar__items {
+    padding: 0.75rem 0.75rem 1.25rem;
+  }
+
+  .navbar-sidebar .menu__list > .menu__list-item > .menu__list-item-collapsible {
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .navbar-sidebar
+    .menu__list
+    > .menu__list-item
+    > .menu__list-item-collapsible
+    > .menu__link {
+    padding: 0.75rem 0.75rem;
+    border-radius: 12px;
+    background: transparent;
+  }
+
+  .navbar-sidebar .menu__list .menu__list {
+    margin: 0.25rem 0 0.75rem 2.75rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--ifm-color-emphasis-200);
+  }
+
+  .navbar-sidebar .menu__list .menu__list .menu__link {
+    padding: 0.55rem 0.5rem;
+    border-radius: 10px;
+  }
+
+  .navbar-sidebar .menu__link:hover {
+    background: rgba(0, 0, 0, 0.03);
+  }
+
+  [data-theme="dark"] .navbar-sidebar .menu__link:hover {
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .navbar-sidebar .menu__list .menu__link--active {
+    background: transparent;
+    box-shadow: inset 3px 0 0 var(--ifm-color-emphasis-900);
+    font-weight: 650;
+  }
+
+  .navbar-sidebar .menu__list .menu__list-item-collapsible--active > .menu__link {
+    background: transparent;
+    box-shadow: inset 3px 0 0 var(--ifm-color-emphasis-900);
+  }
+}
+
 /* "Start here" pill (desktop + mobile) */
 .navbar-start-here {
   display: inline-flex;
