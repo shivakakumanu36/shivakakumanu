@@ -58,6 +58,9 @@
   --ifm-navbar-padding-vertical: 0.2rem;
   --ifm-navbar-item-padding-vertical: 0.25rem;
   --ifm-navbar-item-padding-horizontal: 0.6rem;
+  
+  --doc-sidebar-width: 250px !important;
+  --doc-sidebar-hidden-width: 52px !important;
 }
 
 @media (max-width: 996px) {
@@ -78,6 +81,17 @@
     opacity: 1 !important;
     pointer-events: auto !important;
     margin-right: 0 !important;
+  }
+
+  .navbar-sidebar__brand .navbar__title {
+    font-size: 1.05rem;
+    font-weight: 750;
+    letter-spacing: -0.01em;
+    color: var(--ifm-color-primary-darkest);
+  }
+
+  [data-theme="dark"] .navbar-sidebar__brand .navbar__title {
+    color: var(--ifm-color-primary-light);
   }
 }
 

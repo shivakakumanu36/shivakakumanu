@@ -13,13 +13,22 @@
   }
 }
 
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .header {
   display: flex !important;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.95rem 1rem 0.5rem;
+  gap: 0.5rem;
+  padding: 0.65rem 0.75rem 0.35rem;
   color: inherit !important;
   text-decoration: none !important;
+  min-width: 0;
 }
 
 .headerLogo {
@@ -27,15 +36,42 @@
 }
 
 .headerLogo img {
-  height: 1.6rem;
+  height: 1.25rem;
   width: auto;
 }
 
 .headerTitle {
-  font-size: 1.65rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--ifm-color-emphasis-800);
+  font-size: 1.05rem;
+  font-weight: 750;
+  letter-spacing: -0.01em;
+  color: var(--ifm-color-primary-darkest);
+}
+
+[data-theme="dark"] .headerTitle {
+  color: var(--ifm-color-primary-light);
+}
+
+.colorToggle {
+  width: 1.85rem;
+  height: 1.85rem;
+  flex: 0 0 auto;
+}
+
+.colorToggleButton {
+  border-radius: 999px;
+  transition:
+    background var(--ifm-transition-fast),
+    box-shadow var(--ifm-transition-fast);
+}
+
+.colorToggleButton:hover {
+  background: rgb(var(--accent-rgb) / 0.12);
+  box-shadow: inset 0 0 0 1px rgb(var(--accent-rgb) / 0.25);
+}
+
+[data-theme="dark"] .colorToggleButton:hover {
+  background: rgb(var(--accent-rgb) / 0.16);
+  box-shadow: inset 0 0 0 1px rgb(var(--accent-rgb) / 0.28);
 }
 
 .menu {
