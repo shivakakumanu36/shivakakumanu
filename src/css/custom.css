@@ -6,27 +6,102 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  /* More distinctive palette */
+  --ifm-color-primary: #2563eb;
+  --ifm-color-primary-dark: #1d4ed8;
+  --ifm-color-primary-darker: #1e40af;
+  --ifm-color-primary-darkest: #1e3a8a;
+  --ifm-color-primary-light: #3b82f6;
+  --ifm-color-primary-lighter: #60a5fa;
+  --ifm-color-primary-lightest: #93c5fd;
+
+  /* Typography (more "interesting" while staying system-font only) */
+  --ifm-font-family-base: ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "SF Pro Text", "Avenir Next", "Segoe UI", Roboto,
+    Helvetica, Arial;
+  --ifm-heading-font-family: ui-rounded, "SF Pro Rounded", "Avenir Next",
+    system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
+  --ifm-font-family-monospace: ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+
+  --ifm-font-size-base: 17px;
+  --ifm-line-height-base: 1.8;
+  --ifm-heading-line-height: 1.08;
+  --ifm-heading-font-weight: 800;
+  --ifm-h1-font-size: clamp(2.5rem, 3.5vw + 1rem, 3.75rem);
+  --ifm-h2-font-size: clamp(1.7rem, 2vw + 1rem, 2.4rem);
+  --ifm-h3-font-size: 1.35rem;
+
+  /* Accessible text colors */
+  --ifm-font-color-base: #111827;
+  --ifm-font-color-secondary: #4b5563;
+  --ifm-color-content: #111827;
+  --ifm-color-content-secondary: #4b5563;
+  --ifm-heading-color: #111827;
+
+  /* Backgrounds */
+  --ifm-background-color: #fbfbff;
+  --ifm-background-surface-color: #ffffff;
+
+  /* Links: use darker shade for contrast; accent for UI */
+  --ifm-link-color: var(--ifm-color-primary);
+  --ifm-link-hover-color: var(--ifm-color-primary-dark);
+  --ifm-navbar-link-hover-color: var(--ifm-color-primary);
+
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.08);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #f0b07a;
-  --ifm-color-primary-dark: #ea9d5e;
-  --ifm-color-primary-darker: #e49552;
-  --ifm-color-primary-darkest: #cc7b38;
-  --ifm-color-primary-light: #f5c59a;
-  --ifm-color-primary-lighter: #f7cda7;
-  --ifm-color-primary-lightest: #fbe1c7;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #60a5fa;
+  --ifm-color-primary-dark: #3b82f6;
+  --ifm-color-primary-darker: #2563eb;
+  --ifm-color-primary-darkest: #1d4ed8;
+  --ifm-color-primary-light: #93c5fd;
+  --ifm-color-primary-lighter: #bfdbfe;
+  --ifm-color-primary-lightest: #dbeafe;
+
+  --ifm-font-color-base: rgba(255, 255, 255, 0.92);
+  --ifm-font-color-secondary: rgba(255, 255, 255, 0.72);
+  --ifm-color-content: rgba(255, 255, 255, 0.92);
+  --ifm-color-content-secondary: rgba(255, 255, 255, 0.72);
+  --ifm-heading-color: rgba(255, 255, 255, 0.95);
+
+  --ifm-background-color: #0b1020;
+  --ifm-background-surface-color: #0f172a;
+
+  /* Links in dark mode can use accent directly */
+  --ifm-link-color: var(--ifm-color-primary-light);
+  --ifm-link-hover-color: var(--ifm-color-primary-lighter);
+  --ifm-navbar-link-hover-color: var(--ifm-color-primary-light);
+
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.08);
+}
+
+html {
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Links: remove constant underlines; only show underline on hover/focus */
+.navbar__link,
+.navbar__brand,
+.menu__link,
+.breadcrumbs__link {
+  text-decoration: none !important;
+}
+
+.markdown a {
+  text-decoration: none;
+}
+
+.markdown a:hover,
+.markdown a:focus-visible {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
 }
 
 /* Navbar + sidebar styling (reference formatting) */
@@ -36,7 +111,7 @@
 }
 
 .theme-doc-sidebar-container {
-  background: #fff;
+  background: var(--ifm-background-surface-color);
   border-right: 1px solid var(--ifm-color-emphasis-200);
 }
 
@@ -81,6 +156,10 @@
   .theme-doc-sidebar-container .menu__link:hover {
     background: transparent;
   }
+}
+
+[data-theme="dark"] .theme-doc-sidebar-container .menu__link:hover {
+  background: rgba(255, 255, 255, 0.06);
 }
 
 /* Active item: left black bar + bold, no filled pill */

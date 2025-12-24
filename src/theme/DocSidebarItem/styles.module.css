@@ -22,6 +22,11 @@
   color: rgba(0, 0, 0, 0.85);
 }
 
+:global([data-theme="dark"]) .topLevelIconWrap {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.9);
+}
+
 .topLevelLabel {
   font-size: 1.05rem;
   color: var(--ifm-color-emphasis-700);
