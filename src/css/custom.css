@@ -109,8 +109,9 @@ html {
 
 /* Navbar + sidebar styling (reference formatting) */
 .navbar {
-  background: var(--ifm-background-surface-color);
-  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  background: transparent;
+  border-bottom: none;
+  box-shadow: none;
 }
 
 .theme-doc-sidebar-container {
@@ -295,16 +296,9 @@ html {
   display: none;
 }
 
-/* Mobile: disable fixed (sticky) navbar */
-@media (max-width: 996px) {
-  .navbar.navbar--fixed-top {
-    position: static;
-  }
-
-  .navbar.navbar--fixed-top + .main-wrapper,
-  .main-wrapper {
-    padding-top: 0 !important;
-  }
+/* Let content flow behind the fixed navbar (removes top gap) */
+.navbar.navbar--fixed-top + .main-wrapper {
+  padding-top: 0 !important;
 }
 
 /* Footer background image */
