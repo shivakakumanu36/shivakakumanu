@@ -61,6 +61,9 @@
   
   --doc-sidebar-width: 250px !important;
   --doc-sidebar-hidden-width: 52px !important;
+  /* Keep mobile sidebar width aligned with desktop */
+  --ifm-navbar-sidebar-width: var(--doc-sidebar-width);
+  --ifm-navbar-sidebar-width-sm: var(--doc-sidebar-width);
 }
 
 @media (max-width: 996px) {
