@@ -106,14 +106,20 @@
   --ifm-color-primary-lightest: #dcfce7;
   --accent-rgb: 74 222 128;
 
-  --ifm-font-color-base: #D9B99B;
+  --ifm-font-color-base: #E5E5E5;
   --ifm-font-color-secondary: rgba(229, 229, 229, 0.78);
-  --ifm-color-content: #e5e5e5;
+  --ifm-color-content: #E5E5E5;
   --ifm-color-content-secondary: rgba(229, 229, 229, 0.78);
   --ifm-heading-color: #e5e5e5;
 
   --ifm-background-color: #121212;
   --ifm-background-surface-color: #121212;
+
+  /* Sidebar/menu readability in dark mode */
+  --ifm-menu-color: rgba(229, 229, 229, 0.76);
+  --ifm-menu-color-active: #E5E5E5;
+  --ifm-menu-color-background-active: rgb(var(--accent-rgb) / 0.14);
+  --ifm-menu-color-background-hover: rgba(255, 255, 255, 0.06);
 
   /* Links in dark mode can use accent directly */
   --ifm-link-color: var(--ifm-color-primary-light);
@@ -237,6 +243,14 @@ html {
 .theme-doc-sidebar-container .menu__link {
   font-size: 0.8em;
   line-height: 1.25;
+}
+
+[data-theme="dark"] .theme-doc-sidebar-container .menu__link {
+  color: var(--ifm-menu-color);
+}
+
+[data-theme="dark"] .theme-doc-sidebar-container .menu__link:hover {
+  color: var(--ifm-menu-color-active);
 }
 
 /* Top-level rows: big, clean, icon + label + caret */

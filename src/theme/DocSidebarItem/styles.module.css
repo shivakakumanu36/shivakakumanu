@@ -41,19 +41,28 @@
 
 .topLevelLabel {
   font-size: inherit;
-  color: #585858;
-  font-weight: 500;
+  color: var(--ifm-menu-color);
+  font-weight: 520;
 }
 
 .activeTopLevelLabel {
-  color: #1c1e21;
+  color: var(--ifm-menu-color-active);
   font-weight: 650;
 }
 
 .nestedLabel {
   font-size: inherit;
-  color: #585858;
+  color: var(--ifm-menu-color);
   font-weight: 450;
+}
+
+:global([data-theme="dark"]) .topLevelLabel,
+:global([data-theme="dark"]) .nestedLabel {
+  color: var(--ifm-menu-color);
+}
+
+:global([data-theme="dark"]) .activeTopLevelLabel {
+  color: var(--ifm-menu-color-active);
 }
 
 .iconSvg {
