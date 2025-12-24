@@ -10,3 +10,8 @@ build/
 
 # Generated Tina files
 tina/__generated__/
+.DS_Store
+config/.DS_Store
+docs/.DS_Store
+src/.DS_Store
+static/.DS_Store
