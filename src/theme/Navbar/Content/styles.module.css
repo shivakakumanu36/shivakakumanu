@@ -7,6 +7,16 @@ Hide color mode toggle in small viewports
   }
 }
 
+.mobileBrand {
+  display: inline-flex;
+  align-items: center;
+  height: var(--ifm-navbar-height);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-decoration: none !important;
+  color: var(--ifm-navbar-link-color, var(--ifm-font-color-base));
+}
+
 .floatingFab {
   position: fixed;
   bottom: calc(1rem + env(safe-area-inset-bottom));

@@ -147,7 +147,13 @@ export default function NavbarContent() {
       <NavbarContentLayout
         left={
           <>
-            <NavbarLogo />
+            {!isMobile ? (
+              <NavbarLogo />
+            ) : isHomePage ? (
+              <Link className={styles.mobileBrand} to="/">
+                SHIVA KAKUMANU
+              </Link>
+            ) : null}
           </>
         }
         right={

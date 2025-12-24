@@ -70,8 +70,14 @@
 }
 
 @media (max-width: 996px) {
-  .navbar__brand {
-    display: none;
+  /* Docusaurus hides `.navbar__brand` on mobile; re-enable it inside the sidebar */
+  .navbar-sidebar__brand .navbar__brand,
+  .navbar-sidebar__brand a.navbar__brand {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    margin-right: 0 !important;
   }
 }
 
@@ -168,28 +174,28 @@ html {
 
 /* Don't reserve vertical space for the fixed navbar */
 .main-wrapper {
-  padding-top: 0 !important;
+  padding-top: var(--ifm-navbar-height) !important;
 }
 
 /* Reduce extra top padding in docs content area */
 .docs-wrapper .container.padding-top--md {
-  padding-top: 0.25rem !important;
+  padding-top: 0 !important;
 }
 
 @media (max-width: 996px) {
   .docs-wrapper .container.padding-top--md {
-    padding-top: 0.15rem !important;
+    padding-top: 0 !important;
   }
 }
 
 /* Same treatment for blog pages */
 .blog-wrapper .container.padding-top--md {
-  padding-top: 0.25rem !important;
+  padding-top: 0 !important;
 }
 
 @media (max-width: 996px) {
   .blog-wrapper .container.padding-top--md {
-    padding-top: 0.15rem !important;
+    padding-top: 0 !important;
   }
 }
 
@@ -377,7 +383,7 @@ html {
 
 /* Let content flow behind the fixed navbar (removes top gap) */
 .navbar.navbar--fixed-top + .main-wrapper {
-  padding-top: 0 !important;
+  padding-top: var(--ifm-navbar-height) !important;
 }
 
 /* Footer background image */
