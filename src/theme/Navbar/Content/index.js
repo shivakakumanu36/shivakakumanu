@@ -1,10 +1,6 @@
 import React from "react";
-import Link from "@docusaurus/Link";
-import { useLocation } from "@docusaurus/router";
 import { useWindowSize } from "@docusaurus/theme-common";
 import { useNavbarMobileSidebar } from "@docusaurus/theme-common/internal";
-import NavbarColorModeToggle from "@theme/Navbar/ColorModeToggle";
-import NavbarLogo from "@theme/Navbar/Logo";
 
 import styles from "./styles.module.css";
 
@@ -41,55 +37,14 @@ function FloatingNavToggle({ mobileSidebar }) {
   );
 }
 
-function NavbarContentLayout({
-  left,
-  right,
-}) {
-  return (
-    <div className="navbar__inner">
-      <div className="navbar__items">{left}</div>
-      <div className="navbar__items navbar__items--right">{right}</div>
-    </div>
-  );
-}
-
 export default function NavbarContent() {
-  const location = useLocation();
   const windowSize = useWindowSize();
   const isMobile = windowSize === "mobile";
-  const isHomePage = location.pathname === "/";
 
   const mobileSidebar = useNavbarMobileSidebar();
   const showFloatingNavToggle = isMobile && !mobileSidebar.disabled;
 
-  return (
-    <>
-      <NavbarContentLayout
-        left={
-          <>
-            {!isMobile ? (
-              <NavbarLogo />
-            ) : isHomePage ? (
-              <Link className={styles.mobileBrand} to="/">
-                SHIVA KAKUMANU
-              </Link>
-            ) : null}
-          </>
-        }
-        right={
-          <>
-            {isHomePage ? (
-              <Link className="navbar-start-here" to="/docs/intro">
-                Start here
-              </Link>
-            ) : null}
-            <NavbarColorModeToggle className={styles.colorModeToggle} />
-          </>
-        }
-      />
-      {showFloatingNavToggle && (
-        <FloatingNavToggle mobileSidebar={mobileSidebar} />
-      )}
-    </>
-  );
+  if (!showFloatingNavToggle) return null;
+
+  return <FloatingNavToggle mobileSidebar={mobileSidebar} />;
 }

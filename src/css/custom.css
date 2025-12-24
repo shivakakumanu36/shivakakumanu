@@ -151,20 +151,23 @@ html {
   background: transparent;
   border-bottom: none;
   box-shadow: none;
+  height: 0;
+  min-height: 0;
+  padding: 0;
 }
 
-/* Remove navbar from normal flow (no top gap) */
+/* Keep navbar container for mobile sidebar, but remove the visible top bar */
 .navbar.navbar--fixed-top {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 2000;
 }
 
-/* Make the navbar as compact as possible */
+/* Hide the actual top navbar content */
 .navbar__inner {
-  min-height: var(--ifm-navbar-height);
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
+  display: none !important;
 }
 
 .navbar__items {
@@ -188,8 +191,22 @@ html {
   padding-top: 0 !important;
 }
 
+/* Docusaurus adds this offset for a fixed navbar; override since navbar is hidden */
+.navbar.navbar--fixed-top + .main-wrapper {
+  padding-top: 0 !important;
+}
+
 /* Remove extra top padding inside the page container (docs/blog/etc). */
 .main-wrapper .container.padding-top--md {
+  padding-top: 0 !important;
+}
+
+/* Docs sidebar: remove navbar-related offsets */
+.theme-doc-sidebar-container {
+  margin-top: 0 !important;
+}
+
+.theme-doc-sidebar-container [class^="sidebar_"] {
   padding-top: 0 !important;
 }
 
@@ -200,7 +217,7 @@ html {
 }
 
 .theme-doc-sidebar-container .menu {
-  padding: 0.75rem 0.75rem 1.25rem;
+  padding: 0.35rem 0.6rem 0.75rem;
 }
 
 /* Top-level rows: big, clean, icon + label + caret */
@@ -214,7 +231,7 @@ html {
   > .menu__list-item
   > .menu__list-item-collapsible
   > .menu__link {
-  padding: 0.75rem 0.75rem;
+  padding: 0.5rem 0.6rem;
   border-radius: 12px;
   background: transparent;
 }
@@ -376,9 +393,9 @@ html {
   display: none;
 }
 
-/* Let content flow behind the fixed navbar (removes top gap) */
+/* Navbar is hidden, so don't add any top offset */
 .navbar.navbar--fixed-top + .main-wrapper {
-  padding-top: var(--ifm-navbar-height) !important;
+  padding-top: 0 !important;
 }
 
 /* Footer background image */

@@ -1,7 +1,7 @@
 .menuLinkWithIcon {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.5rem;
 }
 
 .iconWrap {
@@ -15,8 +15,8 @@
 }
 
 .topLevelIconWrap {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 999px;
   background: rgba(0, 0, 0, 0.06);
   color: rgba(0, 0, 0, 0.85);
@@ -49,6 +49,6 @@
 }
 
 .topLevelIconSvg {
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 1.05rem;
+  height: 1.05rem;
 }
