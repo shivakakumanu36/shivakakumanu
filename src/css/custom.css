@@ -7,13 +7,15 @@
 /* You can override the default Infima variables here. */
 :root {
   /* More distinctive palette */
-  --ifm-color-primary: #2563eb;
-  --ifm-color-primary-dark: #1d4ed8;
-  --ifm-color-primary-darker: #1e40af;
-  --ifm-color-primary-darkest: #1e3a8a;
-  --ifm-color-primary-light: #3b82f6;
-  --ifm-color-primary-lighter: #60a5fa;
-  --ifm-color-primary-lightest: #93c5fd;
+  --ifm-color-primary: #16a34a;
+  --ifm-color-primary-dark: #15803d;
+  --ifm-color-primary-darker: #166534;
+  --ifm-color-primary-darkest: #14532d;
+  --ifm-color-primary-light: #22c55e;
+  --ifm-color-primary-lighter: #4ade80;
+  --ifm-color-primary-lightest: #bbf7d0;
+  /* Used for translucent emerald highlights */
+  --accent-rgb: 22 163 74;
 
   /* Typography (more "interesting" while staying system-font only) */
   --ifm-font-family-base: ui-sans-serif, system-ui, -apple-system,
@@ -54,13 +56,14 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #60a5fa;
-  --ifm-color-primary-dark: #3b82f6;
-  --ifm-color-primary-darker: #2563eb;
-  --ifm-color-primary-darkest: #1d4ed8;
-  --ifm-color-primary-light: #93c5fd;
-  --ifm-color-primary-lighter: #bfdbfe;
-  --ifm-color-primary-lightest: #dbeafe;
+  --ifm-color-primary: #4ade80;
+  --ifm-color-primary-dark: #22c55e;
+  --ifm-color-primary-darker: #16a34a;
+  --ifm-color-primary-darkest: #15803d;
+  --ifm-color-primary-light: #86efac;
+  --ifm-color-primary-lighter: #bbf7d0;
+  --ifm-color-primary-lightest: #dcfce7;
+  --accent-rgb: 74 222 128;
 
   --ifm-font-color-base: rgba(255, 255, 255, 0.92);
   --ifm-font-color-secondary: rgba(255, 255, 255, 0.72);
@@ -162,16 +165,16 @@ html {
   background: rgba(255, 255, 255, 0.06);
 }
 
-/* Active item: left black bar + bold, no filled pill */
+/* Active item: emerald left bar + subtle fill */
 .theme-doc-sidebar-container .menu__list .menu__link--active {
-  background: transparent;
-  box-shadow: inset 3px 0 0 var(--ifm-color-emphasis-900);
+  background: rgb(var(--accent-rgb) / 0.10);
+  box-shadow: inset 4px 0 0 var(--ifm-color-primary);
   font-weight: 650;
 }
 
 .theme-doc-sidebar-container .menu__list .menu__list-item-collapsible--active > .menu__link {
-  background: transparent;
-  box-shadow: inset 3px 0 0 var(--ifm-color-emphasis-900);
+  background: rgb(var(--accent-rgb) / 0.08);
+  box-shadow: inset 4px 0 0 var(--ifm-color-primary);
 }
 
 /* Mobile sidebar: match desktop formatting */
@@ -223,14 +226,14 @@ html {
   }
 
   .navbar-sidebar .menu__list .menu__link--active {
-    background: transparent;
-    box-shadow: inset 3px 0 0 var(--ifm-color-emphasis-900);
+    background: rgb(var(--accent-rgb) / 0.10);
+    box-shadow: inset 4px 0 0 var(--ifm-color-primary);
     font-weight: 650;
   }
 
   .navbar-sidebar .menu__list .menu__list-item-collapsible--active > .menu__link {
-    background: transparent;
-    box-shadow: inset 3px 0 0 var(--ifm-color-emphasis-900);
+    background: rgb(var(--accent-rgb) / 0.08);
+    box-shadow: inset 4px 0 0 var(--ifm-color-primary);
   }
 }
 

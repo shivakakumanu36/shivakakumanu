@@ -364,7 +364,7 @@ const config = {
         // Performance and PWA
         {
           name: "theme-color",
-          content: "#2563eb",
+          content: "#16a34a",
         },
         {
           name: "apple-mobile-web-app-capable",
