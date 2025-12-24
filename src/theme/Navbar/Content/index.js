@@ -2,9 +2,7 @@ import React from "react";
 import Link from "@docusaurus/Link";
 import { useLocation } from "@docusaurus/router";
 import { useWindowSize } from "@docusaurus/theme-common";
-import {
-  useNavbarMobileSidebar,
-} from "@docusaurus/theme-common/internal";
+import { useNavbarMobileSidebar } from "@docusaurus/theme-common/internal";
 import NavbarColorModeToggle from "@theme/Navbar/ColorModeToggle";
 import NavbarLogo from "@theme/Navbar/Logo";
 
@@ -43,47 +41,6 @@ function FloatingNavToggle({ mobileSidebar }) {
   );
 }
 
-function FloatingScrollTop() {
-  const [visible, setVisible] = React.useState(false);
-
-  React.useEffect(() => {
-    if (typeof window === "undefined") return;
-
-    const onScroll = () => setVisible(window.scrollY > 240);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  if (!visible) return null;
-
-  return (
-    <button
-      type="button"
-      className={`${styles.floatingFab} ${styles.floatingFabRight}`}
-      aria-label="Scroll to top"
-      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-    >
-      <svg
-        className={styles.floatingFabIcon}
-        width="22"
-        height="22"
-        viewBox="0 0 24 24"
-        fill="none"
-        aria-hidden="true"
-      >
-        <path
-          d="M12 5l-6 6m6-6l6 6"
-          stroke="currentColor"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    </button>
-  );
-}
-
 function NavbarContentLayout({
   left,
   right,
@@ -103,44 +60,7 @@ export default function NavbarContent() {
   const isHomePage = location.pathname === "/";
 
   const mobileSidebar = useNavbarMobileSidebar();
-
   const showFloatingNavToggle = isMobile && !mobileSidebar.disabled;
-
-  React.useEffect(() => {
-    if (!isMobile) return;
-    if (typeof document === "undefined") return;
-
-    const root = document.documentElement;
-    let clearTimer;
-
-    const setTouching = () => {
-      root.setAttribute("data-touching", "true");
-      if (clearTimer) window.clearTimeout(clearTimer);
-    };
-
-    const clearTouchingSoon = () => {
-      if (clearTimer) window.clearTimeout(clearTimer);
-      clearTimer = window.setTimeout(() => {
-        root.removeAttribute("data-touching");
-      }, 3000);
-    };
-
-    document.addEventListener("touchstart", setTouching, { passive: true });
-    document.addEventListener("touchstart", clearTouchingSoon, { passive: true });
-    document.addEventListener("touchend", clearTouchingSoon, { passive: true });
-    document.addEventListener("touchcancel", clearTouchingSoon, {
-      passive: true,
-    });
-
-    return () => {
-      if (clearTimer) window.clearTimeout(clearTimer);
-      root.removeAttribute("data-touching");
-      document.removeEventListener("touchstart", setTouching);
-      document.removeEventListener("touchstart", clearTouchingSoon);
-      document.removeEventListener("touchend", clearTouchingSoon);
-      document.removeEventListener("touchcancel", clearTouchingSoon);
-    };
-  }, [isMobile]);
 
   return (
     <>
@@ -170,7 +90,6 @@ export default function NavbarContent() {
       {showFloatingNavToggle && (
         <FloatingNavToggle mobileSidebar={mobileSidebar} />
       )}
-      {isMobile && <FloatingScrollTop />}
     </>
   );
 }

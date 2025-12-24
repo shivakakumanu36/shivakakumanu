@@ -264,11 +264,9 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: docusaurusData.url + "/admin/#/collections/doc",
         },
         blog: {
           showReadingTime: true,
-          editUrl: docusaurusData.url + "/admin/#/collections/post",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),

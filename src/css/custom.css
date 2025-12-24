@@ -115,6 +115,18 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Disable the built-in back-to-top button entirely */
+.theme-back-to-top-button {
+  display: none !important;
+}
+
+/* Hide "On this page" mobile TOC button */
+@media (max-width: 996px) {
+  .theme-doc-toc-mobile {
+    display: none !important;
+  }
+}
+
 /* Links: remove constant underlines; only show underline on hover/focus */
 .navbar__link,
 .navbar__brand,
@@ -143,10 +155,9 @@ html {
 
 /* Remove navbar from normal flow (no top gap) */
 .navbar.navbar--fixed-top {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
+  z-index: 2000;
 }
 
 /* Make the navbar as compact as possible */
@@ -172,32 +183,16 @@ html {
   font-size: 1rem;
 }
 
-/* Don't reserve vertical space for the fixed navbar */
+/* Navbar is sticky (in-flow), so don't reserve vertical space */
 .main-wrapper {
-  padding-top: var(--ifm-navbar-height) !important;
-}
-
-/* Reduce extra top padding in docs content area */
-.docs-wrapper .container.padding-top--md {
   padding-top: 0 !important;
 }
 
-@media (max-width: 996px) {
-  .docs-wrapper .container.padding-top--md {
-    padding-top: 0 !important;
-  }
-}
-
-/* Same treatment for blog pages */
-.blog-wrapper .container.padding-top--md {
+/* Remove extra top padding inside the page container (docs/blog/etc). */
+.main-wrapper .container.padding-top--md {
   padding-top: 0 !important;
 }
 
-@media (max-width: 996px) {
-  .blog-wrapper .container.padding-top--md {
-    padding-top: 0 !important;
-  }
-}
 
 .theme-doc-sidebar-container {
   background: var(--ifm-background-surface-color);
