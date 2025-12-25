@@ -14,16 +14,33 @@
 
 @media screen and (max-width: 768px) {
   .storySection {
-    padding: 2rem 0;
+    padding: 0 0 1.5rem;
+  }
+
+  /* Let the hero stretch edge-to-edge on mobile */
+  .storySection :global(.container) {
+    padding-left: 0;
+    padding-right: 0;
   }
   .storyImageWrapper {
     position: relative;
-    border-radius: 1.25rem;
+    border-radius: 0;
     overflow: hidden;
-    box-shadow: 0 24px 48px rgba(17, 24, 39, 0.12);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
     background-color: var(--ifm-background-surface-color);
-    max-width: 340px;
-    justify-self: center;
+    max-width: none;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    margin-bottom: 0.5rem; /* small gap before breadcrumbs/header text */
+  }
+
+  .storyImage {
+    width: 100%;
+    height: calc(100vh - 72px); /* fill almost to the breadcrumb row */
+    max-height: none;
+    object-fit: cover;
+    display: block;
   }
 }
 
@@ -76,11 +93,12 @@
 @media screen and (max-width: 996px) {
   .storyContainer {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1.2rem;
     justify-items: center;
   }
   .storyContent {
     max-width: 720px;
+    padding: 0 1.25rem;
   }
 }
 
