@@ -157,12 +157,7 @@ export default function DocSidebarItemCategory({
   const isActive = isActiveSidebarItem(item, activePath);
   const isCurrentPage = isSamePath(href, activePath);
   const { collapsed, setCollapsed } = useCollapsible({
-    initialState: () => {
-      if (!collapsible) {
-        return false;
-      }
-      return isActive ? false : item.collapsed;
-    },
+    initialState: () => false, // never collapse parent sections
   });
   const { expandedItem, setExpandedItem } = useDocSidebarItemsExpandedState();
   const updateCollapsed = (toCollapsed = !collapsed) => {
@@ -177,7 +172,7 @@ export default function DocSidebarItemCategory({
       expandedItem !== index &&
       autoCollapseCategories
     ) {
-      setCollapsed(true);
+      setCollapsed(false);
     }
   }, [collapsible, expandedItem, index, setCollapsed, autoCollapseCategories]);
 

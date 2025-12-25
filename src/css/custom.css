@@ -59,7 +59,7 @@
   --ifm-navbar-item-padding-vertical: 0.25rem;
   --ifm-navbar-item-padding-horizontal: 0.6rem;
   
-  --doc-sidebar-width: 250px !important;
+  --doc-sidebar-width: 300px !important;
   --doc-sidebar-hidden-width: 52px !important;
   /* Keep mobile sidebar width aligned with desktop */
   --ifm-navbar-sidebar-width: var(--doc-sidebar-width);
@@ -87,9 +87,15 @@
   }
 
   .navbar-sidebar__brand .navbar__title {
-    font-size: 1.05rem;
+    flex: 1 1 auto;
+    min-width: 0;
+    font-size: clamp(0.95rem, 3.5vw, 1.08rem);
     font-weight: 750;
     letter-spacing: -0.01em;
+    line-height: 1.15;
+    white-space: normal;
+    text-wrap: balance;
+    word-break: break-word;
     color: var(--ifm-color-primary-darkest);
   }
 
@@ -381,6 +387,10 @@ html {
 
   .navbar-sidebar__brand {
     border-bottom: 1px solid var(--ifm-color-emphasis-200);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.65rem 0.9rem;
   }
 
   .navbar-sidebar__items {
