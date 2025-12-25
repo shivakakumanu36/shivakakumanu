@@ -14,7 +14,7 @@
 
 @media screen and (max-width: 768px) {
   .storySection {
-    padding: 0 0 1.5rem;
+    padding: 0 0 0.6rem;
   }
 
   /* Let the hero stretch edge-to-edge on mobile */
@@ -32,15 +32,30 @@
     width: 100vw;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
-    margin-bottom: 0.5rem; /* small gap before breadcrumbs/header text */
+    margin-bottom: 0.6rem; /* small gap before the heading so it shows on first view */
   }
 
-  .storyImage {
+  .storyImageWrapper .storyImage {
     width: 100%;
-    height: calc(100vh - 72px); /* fill almost to the breadcrumb row */
+    height: var(--story-hero-image-height, 70vh);
     max-height: none;
     object-fit: cover;
     display: block;
+  }
+
+  @supports (height: 1svh) {
+    .storyImageWrapper .storyImage {
+      height: var(--story-hero-image-height, 70svh);
+    }
+  }
+
+  .storyContent {
+    gap: 0.55rem;
+    padding: 0 0.95rem 0.3rem;
+  }
+
+  .storyTitle {
+    margin: 0;
   }
 }
 
@@ -98,7 +113,7 @@
   }
   .storyContent {
     max-width: 720px;
-    padding: 0 1.25rem;
+    padding: 0 1rem 0.25rem;
   }
 }
 
