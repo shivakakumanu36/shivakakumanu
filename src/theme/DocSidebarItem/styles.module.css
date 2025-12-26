@@ -42,7 +42,9 @@
 .topLevelLabel {
   font-size: inherit;
   color: var(--ifm-menu-color);
-  font-weight: 520;
+  font-weight: 650;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, Helvetica, Arial, sans-serif;
 }
 
 .activeTopLevelLabel {
@@ -53,7 +55,9 @@
 .nestedLabel {
   font-size: inherit;
   color: var(--ifm-menu-color);
-  font-weight: 450;
+  font-weight: 550;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, Helvetica, Arial, sans-serif;
 }
 
 :global([data-theme="dark"]) .topLevelLabel,
@@ -108,6 +112,7 @@
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--ifm-color-emphasis-500);
+  font-family: fantasy;
 }
 
 .sectionHeadingCaret {
