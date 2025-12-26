@@ -26,6 +26,17 @@
       "_template": "category"
     },
     {
+      "title": "Skin",
+      "link": "none",
+      "items": [
+        {
+          "document": "docs/Skin/Face-AM.mdx",
+          "_template": "doc"
+        }
+      ],
+      "_template": "category"
+    },
+    {
       "title": "Tutorial - Basics",
       "link": "generated",
       "items": [
@@ -101,11 +112,6 @@
       "title": "Tina.io",
       "href": "https://tina.io/",
       "_template": "link"
-    },
-    {
-      "title": "Skin",
-      "link": "none",
-      "_template": "category"
     }
   ]
 }
