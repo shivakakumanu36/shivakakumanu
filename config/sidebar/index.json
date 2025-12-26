@@ -101,6 +101,11 @@
       "title": "Tina.io",
       "href": "https://tina.io/",
       "_template": "link"
+    },
+    {
+      "title": "Skin",
+      "link": "none",
+      "_template": "category"
     }
   ]
 }
