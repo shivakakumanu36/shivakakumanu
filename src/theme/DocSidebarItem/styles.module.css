@@ -36,7 +36,16 @@
 }
 
 :global([data-theme="dark"]) .activeTopLevelLabel {
-  color: #f2c94c;
+  color: #34d399;
+}
+
+:global(.menu__link--active) .nestedLabel {
+  color: #059669;
+  font-weight: 650;
+}
+
+:global([data-theme="dark"]) .menu__link--active .nestedLabel {
+  color: #34d399;
 }
 
 .iconSvg {
