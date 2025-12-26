@@ -74,3 +74,71 @@
   width: 1.25rem;
   height: 1.25rem;
 }
+
+.sectionHeading {
+  margin: 0;
+}
+
+.sectionHeadingButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 1.35rem 0.75rem 0.6rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.sectionHeadingButton:hover {
+  opacity: 0.95;
+}
+
+.sectionHeadingIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.sectionHeadingText {
+  font-size: 0.9rem;
+  font-weight: 650;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ifm-color-emphasis-500);
+}
+
+.sectionHeadingCaret {
+  margin-left: auto;
+  width: 1.2rem;
+  height: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--ifm-transition-fast) ease;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.sectionHeadingCaretIcon {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.sectionHeadingCaretCollapsed {
+  transform: rotate(-90deg);
+}
+
+.sectionHeadingCaretExpanded {
+  transform: rotate(0deg);
+}
+
+:global([data-theme="dark"]) .sectionHeadingIcon,
+:global([data-theme="dark"]) .sectionHeadingCaret {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+:global([data-theme="dark"]) .sectionHeadingText {
+  color: rgba(255, 255, 255, 0.48);
+}

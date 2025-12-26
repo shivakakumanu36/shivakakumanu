@@ -268,14 +268,6 @@ html {
   gap: 0.5rem;
 }
 
-.theme-doc-sidebar-container .menu__caret,
-.theme-doc-sidebar-container .menu__link--sublist-caret::after,
-.navbar-sidebar .menu__caret,
-.navbar-sidebar .menu__link--sublist-caret::after {
-  display: none !important;
-  content: none !important;
-}
-
 .theme-doc-sidebar-container
   .menu__list
   > .menu__list-item
