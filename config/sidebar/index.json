@@ -3,6 +3,7 @@
   "items": [
     {
       "document": "docs/intro.mdx",
+      "label": "The Vibe",
       "_template": "doc"
     },
     {
