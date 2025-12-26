@@ -8,8 +8,8 @@
     "docusaurus": "docusaurus",
     "dev": "tinacms dev -c \"docusaurus start --host 0.0.0.0\" --watchFolders config --watchFolders src --watchFolders docs --watchFolders blog --watchFolders static --watchFolders tina",
     "start": "docusaurus start",
-  "prebuild": "node scripts/convert-images-to-webp.js",
-  "build": "tinacms build && docusaurus build",
+    "prebuild": "node scripts/convert-images-to-webp.js",
+    "build": "tinacms build && docusaurus build",
     "build-local": "tinacms build --local --skip-indexing --skip-cloud-checks && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
@@ -28,8 +28,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tinacms": "^2.9.0",
-    "title": "^3.5.3",
-    "web-vitals": "^3.5.2"
+    "title": "^3.5.3"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.3.2",

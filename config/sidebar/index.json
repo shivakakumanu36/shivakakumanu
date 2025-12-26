@@ -7,6 +7,25 @@
       "_template": "doc"
     },
     {
+      "title": "Food Recipes",
+      "link": "none",
+      "items": [
+        {
+          "document": "docs/Food Recipes/Mixed Meat Fried Rice.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/Food Recipes/Coriander Pulao.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/Food Recipes/Veg Kheema Curry.mdx",
+          "_template": "doc"
+        }
+      ],
+      "_template": "category"
+    },
+    {
       "title": "Tutorial - Basics",
       "link": "generated",
       "items": [
