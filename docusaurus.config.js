@@ -256,23 +256,27 @@ const config = {
       },
     }] : []),
     // Force dark mode as the starting theme and let the toggle flip to light.
-    {
-      tagName: "script",
-      attributes: {
-        type: "text/javascript",
-      },
-      innerHTML: `(function() {
+        {
+          tagName: "script",
+          attributes: {
+            type: "text/javascript",
+          },
+          innerHTML: `(function() {
   try {
     var docEl = document.documentElement;
-    localStorage.setItem('theme', 'dark');
-    docEl.setAttribute('data-theme', 'dark');
-    docEl.classList.remove('theme-light');
-    docEl.classList.add('theme-dark');
+    var stored = localStorage.getItem('_docusaurus_color_mode');
+    if (!stored) {
+      stored = 'dark';
+      localStorage.setItem('_docusaurus_color_mode', stored);
+    }
+    docEl.setAttribute('data-theme', stored);
+    docEl.classList.remove('theme-light', 'theme-dark');
+    docEl.classList.add(stored === 'dark' ? 'theme-dark' : 'theme-light');
   } catch (e) {
     document.documentElement.setAttribute('data-theme', 'dark');
   }
 })();`,
-    },
+        },
   ],
 
   presets: [

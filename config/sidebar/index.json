@@ -11,15 +11,51 @@
       "link": "none",
       "items": [
         {
-          "document": "docs/Food Recipes/Mixed Meat Fried Rice.mdx",
+          "document": "docs/food-recipes/mixed-chicken-shrimp-fried-rice.mdx",
           "_template": "doc"
         },
         {
-          "document": "docs/Food Recipes/Coriander Pulao.mdx",
+          "document": "docs/food-recipes/coriander-pulao.mdx",
           "_template": "doc"
         },
         {
-          "document": "docs/Food Recipes/Veg Kheema Curry.mdx",
+          "document": "docs/food-recipes/veg-kheema-curry.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/food-recipes/burnt-garlic-jeera-rice.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/food-recipes/paneer-bhurji.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/food-recipes/bagara-rice.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/food-recipes/veg-pulao.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/food-recipes/spinach-chicken.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/food-recipes/sambar-rice.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/food-recipes/goat-plus-liver-curry.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/food-recipes/soy-kheema-curry.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/food-recipes/spaghetti-meat-ball-pasta.mdx",
           "_template": "doc"
         }
       ],
@@ -30,7 +66,7 @@
       "link": "none",
       "items": [
         {
-          "document": "docs/Skin/Face-AM.mdx",
+          "document": "docs/skin/face-am.mdx",
           "_template": "doc"
         }
       ],
