@@ -57,6 +57,21 @@
         }
       ],
       "_template": "category"
+    },
+    {
+      "title": "Skin",
+      "link": "none",
+      "items": [
+        {
+          "document": "docs/skin/face-am.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/skin/face-pm.mdx",
+          "_template": "doc"
+        }
+      ],
+      "_template": "category"
     }
   ]
 }
