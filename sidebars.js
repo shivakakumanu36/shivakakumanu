@@ -1,15 +1,4 @@
-const fs = require("fs");
-const path = require("path");
-
 const sidebarData = require("./config/sidebar/index.json");
-
-const docExists = (doc) => {
-  if (!doc) {
-    return false;
-  }
-  // Skip sidebar entries whose documents are missing to avoid Docusaurus build errors.
-  return fs.existsSync(path.join(__dirname, doc));
-};
 
 const getDocId = (doc) => {
   return doc
@@ -47,7 +36,7 @@ const getItem = (item) => {
   };
 
   if (type === "doc") {
-    if (!item.document || !docExists(item.document)) {
+    if (!item.document) {
       return [];
     }
 
@@ -75,15 +64,9 @@ const getItem = (item) => {
     // Categories (parent sections) should not be navigable pages:
     // clicking them expands/collapses but stays on the current page.
 
-    const categoryItems = (item.items || []).flatMap((item) => {
+    itemProps.items = item.items.flatMap((item) => {
       return getItem(item);
     });
-
-    if (categoryItems.length === 0) {
-      return [];
-    }
-
-    itemProps.items = categoryItems;
   }
 
   if (type === "link") {
