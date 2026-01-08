@@ -900,36 +900,6 @@ https://www.youtube.com/watch?v=zFgQRwI2Zfc
 https://www.youtube.com/watch?v=ApcQLVb2ues
 
 
-        ,
-        {
-          "document": "docs/food-recipes/bagara-rice.mdx",
-          "_template": "doc"
-        },
-        {
-          "document": "docs/food-recipes/goat-plus-liver-curry.mdx",
-          "_template": "doc"
-        },
-        {
-          "document": "docs/food-recipes/veg-pulao.mdx",
-          "_template": "doc"
-        },
-        {
-          "document": "docs/food-recipes/spinach-chicken.mdx",
-          "_template": "doc"
-        },
-
-        {
-          "document": "docs/food-recipes/sambar-rice.mdx",
-          "_template": "doc"
-        },
-        {
-          "document": "docs/food-recipes/coriander-pulao.mdx",
-          "_template": "doc"
-        },
-        {
-          "document": "docs/food-recipes/soy-kheema-curry.mdx",
-          "_template": "doc"
-        }
 
 
 
@@ -1376,4 +1346,3 @@ suggest responses for real situations
 
 
 You’re already doing something important — reflecting and improving. That itself signals strong character.
-

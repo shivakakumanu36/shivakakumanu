@@ -25,6 +25,10 @@
         {
           "document": "docs/food-recipes/paneer-bhurji.mdx",
           "_template": "doc"
+        },
+        {
+          "document": "docs/food-recipes/sambar-rice.mdx",
+          "_template": "doc"
         }
       ],
       "_template": "category"
