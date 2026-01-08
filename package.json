@@ -6,7 +6,7 @@
     "update:deps": "npm update && npm install @docusaurus/core@latest @docusaurus/preset-classic@latest",
     "audit:fix": "npm audit fix || true",
     "docusaurus": "docusaurus",
-    "dev": "tinacms dev -c \"docusaurus start --host 0.0.0.0\" --watchFolders config --watchFolders src --watchFolders docs --watchFolders blog --watchFolders static --watchFolders tina",
+    "dev": "tinacms dev -c \"docusaurus start --host 0.0.0.0\" --watchFolders config --watchFolders src --watchFolders docs --watchFolders static --watchFolders tina",
     "start": "docusaurus start",
     "prebuild": "node scripts/convert-images-to-webp.js",
     "build": "tinacms build && docusaurus build",
@@ -21,7 +21,6 @@
   "dependencies": {
     "@docusaurus/core": "3.3.2",
     "@docusaurus/preset-classic": "3.3.2",
-    "@mdx-js/react": "^3.1.1",
     "@tinacms/cli": "^1.11.0",
     "clsx": "^2.1.1",
     "prism-react-renderer": "^2.4.1",
@@ -31,7 +30,6 @@
     "title": "^3.5.3"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.3.2",
     "imagemin": "^7.0.1",
     "imagemin-webp": "^8.0.0"
   },
