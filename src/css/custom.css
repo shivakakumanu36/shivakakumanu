@@ -64,6 +64,12 @@
   /* Keep mobile sidebar width aligned with desktop */
   --ifm-navbar-sidebar-width: var(--doc-sidebar-width);
   --ifm-navbar-sidebar-width-sm: var(--doc-sidebar-width);
+  --ifm-table-cell-padding: 0.35rem 0.6rem;
+}
+
+.markdown table {
+  font-size: 0.95rem;
+  line-height: 1.4;
 }
 
 @media (max-width: 996px) {
