@@ -48,6 +48,10 @@
         {
           "document": "docs/self-care/hair.mdx",
           "_template": "doc"
+        },
+        {
+          "document": "docs/self-care/weekly-target-weight.mdx",
+          "_template": "doc"
         }
       ],
       "_template": "category"

@@ -70,6 +70,48 @@
 .markdown table {
   font-size: 0.95rem;
   line-height: 1.4;
+  width: auto;
+  max-width: 100%;
+}
+
+/* Fancy, minimal table styling with two highlighted columns */
+.markdown table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1.5px solid rgba(15, 23, 42, 0.25);
+  background: #ffffff;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.08);
+}
+
+.markdown table th,
+.markdown table td {
+  border: 1px solid rgba(15, 23, 42, 0.18);
+}
+
+.markdown table thead th {
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: 0.01em;
+}
+
+/* Highlight kcal (3rd col) and protein (6th col) */
+.markdown table th:nth-child(3),
+.markdown table td:nth-child(3) {
+  background: #e8f1ff;
+}
+
+.markdown table th:nth-child(6),
+.markdown table td:nth-child(6) {
+  background: #e8f7ef;
+}
+
+@media (max-width: 996px) {
+  .markdown table {
+    border-radius: 10px;
+    box-shadow: 0 6px 14px rgba(15, 23, 42, 0.08);
+  }
 }
 
 @media (max-width: 996px) {
