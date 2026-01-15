@@ -29,6 +29,22 @@
         {
           "document": "docs/food-recipes/chicken-bhurji.mdx",
           "_template": "doc"
+        },
+        {
+          "document": "docs/food-recipes/chipotle-lime-roast.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/food-recipes/herb-forward-mediterranean.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/food-recipes/taco-style-tex-mex.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/food-recipes/moroccan-style-warm-spice.mdx",
+          "_template": "doc"
         }
       ],
       "_template": "category"
