@@ -7,43 +7,38 @@
       "_template": "doc"
     },
     {
+      "title": "First Principles of Living",
+      "link": "none",
+      "items": [
+        {
+          "document": "docs/first-principles-of-living/nutrition.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/first-principles-of-living/personal-care.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/first-principles-of-living/finance.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/first-principles-of-living/life-fulfillment.mdx",
+          "_template": "doc"
+        }
+      ],
+      "_template": "category"
+    },
+    {
       "title": "Food Recipes",
       "link": "none",
       "items": [
         {
-          "document": "docs/food-recipes/mixed-chicken-shrimp-fried-rice.mdx",
+          "document": "docs/food-recipes/baby-step-meals/lunch-meal.md",
           "_template": "doc"
         },
         {
-          "document": "docs/food-recipes/lemon-herb-chicken-and-rice.mdx",
-          "_template": "doc"
-        },
-        {
-          "document": "docs/food-recipes/burnt-garlic-jeera-rice.mdx",
-          "_template": "doc"
-        },
-        {
-          "document": "docs/food-recipes/sambar-rice.mdx",
-          "_template": "doc"
-        },
-        {
-          "document": "docs/food-recipes/chicken-bhurji.mdx",
-          "_template": "doc"
-        },
-        {
-          "document": "docs/food-recipes/chipotle-lime-roast.mdx",
-          "_template": "doc"
-        },
-        {
-          "document": "docs/food-recipes/herb-forward-mediterranean.mdx",
-          "_template": "doc"
-        },
-        {
-          "document": "docs/food-recipes/taco-style-tex-mex.mdx",
-          "_template": "doc"
-        },
-        {
-          "document": "docs/food-recipes/moroccan-style-warm-spice.mdx",
+          "document": "docs/food-recipes/baby-step-meals/morning-meal.md",
           "_template": "doc"
         }
       ],
