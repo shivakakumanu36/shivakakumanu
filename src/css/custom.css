@@ -70,48 +70,70 @@
 .markdown table {
   font-size: 0.95rem;
   line-height: 1.4;
-  width: auto;
+  display: table;
+  width: max-content;
   max-width: 100%;
-}
-
-/* Fancy, minimal table styling with two highlighted columns */
-.markdown table {
   border-collapse: separate;
   border-spacing: 0;
-  border-radius: 14px;
+  border-radius: 8px;
   overflow: hidden;
-  border: 1.5px solid rgba(15, 23, 42, 0.25);
+  border: 1px solid rgba(15, 23, 42, 0.16);
   background: #ffffff;
-  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.08);
+  box-shadow: none;
+  margin: 1rem 0 1.5rem;
 }
 
 .markdown table th,
 .markdown table td {
-  border: 1px solid rgba(15, 23, 42, 0.18);
+  border: 0;
+  border-right: 1px solid rgba(15, 23, 42, 0.14);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.14);
+  padding: 0.6rem 0.8rem;
+}
+
+.markdown table th:last-child,
+.markdown table td:last-child {
+  border-right: 0;
+}
+
+.markdown table tbody tr:last-child td {
+  border-bottom: 0;
 }
 
 .markdown table thead th {
+  background: #f3f4f6;
   font-weight: 800;
   color: #0f172a;
-  letter-spacing: 0.01em;
+  letter-spacing: 0;
 }
 
-/* Highlight kcal (3rd col) and protein (6th col) */
-.markdown table th:nth-child(3),
-.markdown table td:nth-child(3) {
-  background: #e8f1ff;
-}
-
-.markdown table th:nth-child(6),
-.markdown table td:nth-child(6) {
-  background: #e8f7ef;
+.markdown table tbody tr:nth-child(even) td {
+  background: #f8fafc;
 }
 
 @media (max-width: 996px) {
   .markdown table {
-    border-radius: 10px;
-    box-shadow: 0 6px 14px rgba(15, 23, 42, 0.08);
+    border-radius: 8px;
   }
+}
+
+[data-theme="dark"] .markdown table {
+  border-color: rgba(229, 229, 229, 0.2);
+  background: #181818;
+}
+
+[data-theme="dark"] .markdown table th,
+[data-theme="dark"] .markdown table td {
+  border-color: rgba(229, 229, 229, 0.14);
+}
+
+[data-theme="dark"] .markdown table thead th {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f4f4f5;
+}
+
+[data-theme="dark"] .markdown table tbody tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.035);
 }
 
 @media (max-width: 996px) {
@@ -221,6 +243,103 @@ html {
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
+}
+
+.markdown h2:is(
+  [id$="scope-of-project"],
+  [id$="critical-pain-points"],
+  [id$="business-models"],
+  [id$="three-strategic-levers-for-success"],
+  [id$="cost-structure"],
+  [id$="return-on-investment"],
+  [id$="legal-regulatory-setup"],
+  [id$="quick-decision-matrix"],
+  [id$="vendors-and-machine-suppliers"],
+  [id$="biggest-nos-and-mistakes-to-avoid"],
+  [id$="strategy-plan"],
+  [id$="ebitda"],
+  [id$="final-positioning"]
+) {
+  background: #14532d;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1.45rem;
+  line-height: 1.2;
+  margin: 2.25rem 0 0;
+  padding: 0.85rem 1.1rem;
+}
+
+.markdown h2:is(
+  [id$="scope-of-project"],
+  [id$="critical-pain-points"],
+  [id$="business-models"],
+  [id$="three-strategic-levers-for-success"],
+  [id$="cost-structure"],
+  [id$="return-on-investment"],
+  [id$="legal-regulatory-setup"],
+  [id$="quick-decision-matrix"],
+  [id$="vendors-and-machine-suppliers"],
+  [id$="biggest-nos-and-mistakes-to-avoid"],
+  [id$="strategy-plan"],
+  [id$="ebitda"],
+  [id$="final-positioning"]
+) .hash-link {
+  color: inherit;
+}
+
+.vending-section__body {
+  border-left: 4px solid rgba(20, 83, 45, 0.35);
+  margin: 1rem 0 0 1rem;
+  padding-left: 1.25rem;
+}
+
+@media (max-width: 996px) {
+  .markdown h2:is(
+    [id$="scope-of-project"],
+    [id$="critical-pain-points"],
+    [id$="business-models"],
+    [id$="three-strategic-levers-for-success"],
+    [id$="cost-structure"],
+    [id$="return-on-investment"],
+    [id$="legal-regulatory-setup"],
+    [id$="quick-decision-matrix"],
+    [id$="vendors-and-machine-suppliers"],
+    [id$="biggest-nos-and-mistakes-to-avoid"],
+    [id$="strategy-plan"],
+    [id$="ebitda"],
+    [id$="final-positioning"]
+  ) {
+    font-size: 1.2rem;
+    padding: 0.75rem 0.9rem;
+  }
+
+  .vending-section__body {
+    margin-left: 0.35rem;
+    padding-left: 0.9rem;
+  }
+}
+
+[data-theme="dark"] .markdown h2:is(
+  [id$="scope-of-project"],
+  [id$="critical-pain-points"],
+  [id$="business-models"],
+  [id$="three-strategic-levers-for-success"],
+  [id$="cost-structure"],
+  [id$="return-on-investment"],
+  [id$="legal-regulatory-setup"],
+  [id$="quick-decision-matrix"],
+  [id$="vendors-and-machine-suppliers"],
+  [id$="biggest-nos-and-mistakes-to-avoid"],
+  [id$="strategy-plan"],
+  [id$="ebitda"],
+  [id$="final-positioning"]
+) {
+  background: #22c55e;
+  color: #052e16;
+}
+
+[data-theme="dark"] .vending-section__body {
+  border-left-color: rgba(74, 222, 128, 0.45);
 }
 
 /* Navbar + sidebar styling (reference formatting) */
