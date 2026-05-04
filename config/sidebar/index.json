@@ -30,6 +30,21 @@
       "_template": "category"
     },
     {
+      "title": "Pursuit of Money",
+      "link": "none",
+      "items": [
+        {
+          "document": "docs/pursuit-of-money/real-estate.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/pursuit-of-money/vending-machine.mdx",
+          "_template": "doc"
+        }
+      ],
+      "_template": "category"
+    },
+    {
       "title": "Food Recipes",
       "link": "none",
       "items": [
