@@ -6,16 +6,17 @@
  * - Push notifications
  */
 
-const CACHE_NAME = 'shivakakumanu-v1';
+const CACHE_PREFIX = 'shivakakumanu';
+const CACHE_NAME = `${CACHE_PREFIX}-v2`;
 const STATIC_ASSETS = [
   '/',
   '/index.html',
   '/offline.html',
 ];
 
-const DYNAMIC_CACHE = 'shivakakumanu-dynamic-v1';
-const IMAGE_CACHE = 'shivakakumanu-images-v1';
-const API_CACHE = 'shivakakumanu-api-v1';
+const DYNAMIC_CACHE = `${CACHE_PREFIX}-dynamic-v2`;
+const IMAGE_CACHE = `${CACHE_PREFIX}-images-v2`;
+const API_CACHE = `${CACHE_PREFIX}-api-v2`;
 
 const CACHE_EXPIRATION = {
   images: 30 * 24 * 60 * 60 * 1000, // 30 days
@@ -46,7 +47,12 @@ self.addEventListener('activate', (event) => {
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames
-          .filter((name) => !name.includes('shivakakumanu'))
+          .filter((name) => name.startsWith(CACHE_PREFIX) && ![
+            CACHE_NAME,
+            DYNAMIC_CACHE,
+            IMAGE_CACHE,
+            API_CACHE,
+          ].includes(name))
           .map((name) => caches.delete(name))
       );
     })

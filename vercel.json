@@ -1,6 +1,8 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "build",
+  "cleanUrls": true,
+  "trailingSlash": false,
   "headers": [
     {
       "source": "/",
@@ -71,7 +73,7 @@
       ]
     },
     {
-      "source": "/(.*\\.html|.*\\.json)",
+      "source": "/(.*\\.json)",
       "headers": [
         {
           "key": "Cache-Control",
@@ -152,12 +154,16 @@
   
   "rewrites": [
     {
-      "source": "/sitemap.xml",
-      "destination": "/build/sitemap.xml"
+      "source": "/pursuit-of-money/vending-machine/",
+      "destination": "/pursuit-of-money/vending-machine"
     },
     {
-      "source": "/robots.txt",
-      "destination": "/static/robots.txt"
+      "source": "/pursuit-of-money/real-estate/",
+      "destination": "/pursuit-of-money/real-estate"
+    },
+    {
+      "source": "/pursuit-of-money/",
+      "destination": "/pursuit-of-money"
     }
   ]
 }
