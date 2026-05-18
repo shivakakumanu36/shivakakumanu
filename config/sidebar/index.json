@@ -40,6 +40,11 @@
         {
           "document": "docs/pursuit-of-money/vending-machine.mdx",
           "_template": "doc"
+        },
+        {
+          "document": "docs/pursuit-of-money/strategy.mdx",
+          "label": "Strategy & Execution",
+          "_template": "doc"
         }
       ],
       "_template": "category"
